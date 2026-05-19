@@ -1,123 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fashion Dealer</title>
 
   <style>
-
     body {
       margin: 0;
-      background: #f4f1ea;
-      color: black;
-      font-family: Arial, sans-serif;
+      background: #d8d6cf;
+      color: #111;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 40px;
-      padding: 25px;
-      border-bottom: 1px solid black;
-      background: white;
+      gap: 35px;
+      padding: 22px;
+      background: #111;
       position: sticky;
       top: 0;
+      z-index: 10;
     }
 
     nav a {
+      color: #e8e5dc;
       text-decoration: none;
-      color: black;
-      font-size: 14px;
-      letter-spacing: 2px;
       text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 2px;
     }
 
     .hero {
-      height: 90vh;
+      min-height: 90vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
+      background: #c8c5bd;
+    }
+
+    .hero img {
+      max-width: 420px;
+      width: 85%;
+      margin-bottom: 35px;
     }
 
     h1 {
-      font-size: 80px;
+      font-size: 72px;
       margin: 0;
-      font-family: serif;
+      line-height: 0.9;
+      text-transform: lowercase;
+    }
+
+    h2 {
+      font-size: 42px;
+      text-transform: lowercase;
+      margin-bottom: 30px;
     }
 
     p {
-      max-width: 600px;
+      max-width: 650px;
       line-height: 1.6;
+      font-size: 17px;
     }
 
     .section {
-      padding: 100px 30px;
-      border-top: 1px solid black;
+      padding: 90px 25px;
+      border-top: 1px solid #111;
     }
 
-    .event-card {
-      border: 1px solid black;
-      padding: 20px;
-      margin-top: 20px;
-      background: white;
+    .dark {
+      background: #111;
+      color: #e8e5dc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: #e8e5dc;
+      color: #111;
+      border: 1px solid #111;
+      padding: 18px;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .upcoming img {
+      max-width: 520px;
+      width: 100%;
+      display: block;
+      margin-bottom: 25px;
+      border: 1px solid #111;
     }
 
     input, button {
-      padding: 15px;
       width: 100%;
+      max-width: 500px;
+      padding: 15px;
       margin-top: 10px;
-      border: 1px solid black;
-      background: white;
+      border: 1px solid #111;
+      font-family: inherit;
+      font-size: 15px;
     }
 
     button {
+      background: #111;
+      color: #e8e5dc;
       cursor: pointer;
-      background: black;
-      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
-
   </style>
 </head>
 
 <body>
 
 <nav>
-  <a href="#">Home</a>
-  <a href="#">Community</a>
-  <a href="#">Events</a>
-  <a href="#">Contact</a>
+  <a href="#home">Home</a>
+  <a href="#upcoming">Upcoming</a>
+  <a href="#community">Community</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<section class="hero">
-  <h1>Fashion Dealer</h1>
-  <p>
-    Underground pop-ups, archive fashion, hidden gems & community events based in Barcelona.
-  </p>
+<section class="hero" id="home">
+  <img src="images/logo.jpg" alt="Fashion Dealer logo">
+  <h1>fashion<br>dealer</h1>
+  <p>Underground pop-ups, archive fashion, hidden gems & community events based in Barcelona.</p>
 </section>
 
-<section class="section">
+<section class="section dark upcoming" id="upcoming">
   <h2>Upcoming Pop-Up</h2>
+  <img src="images/flyer.jpg" alt="Fashion Dealer pop-up flyer">
+  <h3>13th & 14th June</h3>
+  <p>AfterSchool / Znak Community — Carrer de Calàbria 25, Eixample, 08015 Barcelona.</p>
+</section>
 
-  <div class="event-card">
-    <h3>13th & 14th June</h3>
-    <p>AfterSchool · Barcelona</p>
+<section class="section" id="community">
+  <h2>Community</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/definition.jpg" alt="Fashion Dealer definition">
+      <h3>Fashion Dealer</h3>
+      <p>A person who finds fashion where others don’t look.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/star.jpg" alt="Fashion Dealer star">
+      <h3>Hidden Symbols</h3>
+      <p>Chrome, stars, safety pins and scanned textures.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/pin.jpg" alt="Fashion Dealer safety pin">
+      <h3>Archive Energy</h3>
+      <p>For temporary fashion worlds, pop-ups and underground sellers.</p>
+    </div>
   </div>
 </section>
 
-<section class="section">
-  <h2>Community</h2>
-
-  <p>
-    A space for underground fashion events, archive sellers, emerging designers & cool people.
-  </p>
-</section>
-
-<section class="section">
-  <h2>Stay Updated</h2>
+<section class="section dark" id="contact">
+  <h2>Contact</h2>
+  <p>Subscribe for upcoming pop-ups, locations and community events.</p>
 
   <input type="email" placeholder="Your email">
   <button>Subscribe</button>
